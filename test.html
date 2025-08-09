@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ROCK|PAPER|SCISSORS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="rps">
+      <h1>Rock • Paper • Scissors</h1>
+      <div class="rules">
+        <p>
+          The game is played between you and the computer. Each player
+          simultaneously chooses one of three options: rock, paper, or scissors.
+          The winner is determined by the rules:
+        </p>
+        <ul>
+          <li>🪨 Rock crushes Scissors</li>
+          <li>📄 Scissors cuts Paper</li>
+          <li>✂️ Paper covers Rock</li>
+        </ul>
+        <p>First to reach the target score wins!</p>
+        <p>
+          Keyboard shortcuts (case-insensitive): R: rock, P: paper, S: scissors
+        </p>
+      </div>
+
+      <div class="controls">
+        <label>
+          First to
+          <select id="targetScore">
+            <option>5</option>
+            <option selected>10</option>
+            <option>20</option>
+          </select>
+        </label>
+        <button id="replay" class="ghost">Replay</button>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score">
+          <strong>You</strong>
+          <div class="points"><span id="youScore">0</span></div>
+          <div class="bar"><div id="youBar"></div></div>
+        </div>
+        <div class="score">
+          <strong>Computer</strong>
+          <div class="points"><span id="cpuScore">0</span></div>
+          <div class="bar"><div id="cpuBar"></div></div>
+        </div>
+      </div>
+
+      <div class="choices">
+        <button class="choice" data-choice="rock" aria-label="Rock">🪨</button>
+        <button class="choice" data-choice="paper" aria-label="Paper">
+          📄
+        </button>
+        <button class="choice" data-choice="scissors" aria-label="Scissors">
+          ✂️
+        </button>
+      </div>
+
+      <p id="roundMsg" class="msg">Make your move…</p>
+
+      <ul id="history" class="history" aria-live="polite"></ul>
+    </div>
+
+    <script src="test.js"></script>
+  </body>
+</html>
